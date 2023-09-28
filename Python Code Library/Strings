@@ -1,0 +1,4 @@
+# breaks strings into all possible substrings
+ substrings = {string[a:a + k] for k in range(1, 1 + len(string))
+                  for a in range(1 + len(string) - k)}
+
