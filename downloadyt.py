@@ -1,6 +1,5 @@
 from pytube import YouTube
 import os
-import asyncio
 ytPath = "YouTubeDownloads"
 def file_path(target):
     home = os.path.expanduser('~')
@@ -15,17 +14,12 @@ def Download(link):
         print("Download complete")
     except:
         print("An error has occurred")
-def getURLs():
+def init():
     uploadpath = "C:\\Users\\soute\\Documents\\youtubeclipsforDL.txt"
     with open(uploadpath, "r") as f:
         storeYTURL = [line for line in f]
     for url in storeYTURL:
         Download(url)
-
-if os.path.exists(ytPath):
-    getURLs()
-else:
-    os.makedirs(file_path(ytPath))
-    getURLs()
+    print("Script complete!")
 
 
