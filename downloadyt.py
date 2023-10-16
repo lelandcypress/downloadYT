@@ -9,13 +9,12 @@ def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_audio_only()
     youtubeObject.download(file_path(ytPath))
-    print("An error has occurred")
 def startDownload():
     uploadfolder = "Documents\\youtubeclipsforDL.txt"
     i = 1
     with open(file_path(uploadfolder), "r") as f:
         storeYTURL = [line for line in f]
-    print(f"{len(storeYTURL)} Links in file...download staring")
+    print(f"{len(storeYTURL)} links in file...download starting")
     try:
         for url in storeYTURL:
             print(f"Downloading {i} of {len(storeYTURL)}")
