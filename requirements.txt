@@ -1,0 +1,20 @@
+Requirements:
+Python 3.10 or higher
+PIP libraries
+    - Pytube: this is the backbone of the script.
+        - To install pytube navigate to the app root directory and type pip install pytube
+    - OS
+
+Running the script
+    - from the command line or terminal run python main.py
+    - Script is set up to read a txt file named "youtubeclipsforDL.txt". It will look in the local users home directly under the Documents folder.
+        - Example(C:\User\coolguy\Documents\youtubeclipsforDL.txt)
+    - See download.py if you need to modify either where the downloads land, or where the text file is read from.
+
+Future releases:
+    - 2.0:
+        - Plan to include multithreading for faster downloads
+        - Logging to keep track of what's been downloaded
+        - automatic compression
+    - 3.0:
+        - Basic REACT UI
