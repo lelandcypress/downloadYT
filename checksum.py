@@ -2,9 +2,8 @@ import hashlib
 from dirManagement import *
 from compressiontools import output
 from datetime import datetime
-tardate = datetime.today().strftime('%Y-%m-%d')
 def hashFile():
-    ytHashed = f'TarHash{tardate}.txt'
+    ytHashed = f'TarHash.txt'
     targettar = os.path.join(file_path(file_path(outputfolder)), output)
     hashDir = os.path.join(file_path(file_path(outputfolder)), ytHashed)
     block = 65000
