@@ -3,7 +3,6 @@ from compressiontools import *
 from dirManagement import *
 from logger import *
 from checksum import *
-from generateScript import generateUploadScript
 storeYTURL= []
 def Download(link):
     youtubeObject = YouTube(link)
@@ -32,8 +31,6 @@ def startDownload():
     print("Hashing")
     hashFile()
     print("Hash complete")
-    print("Generating upload script")
-    generateUploadScript()
     delete = input("Would you like to delete the MP4s now? y/n: ")
     if delete == 'y' or delete =='Y':
         print("Removing MP4s from YTDownloads!")
